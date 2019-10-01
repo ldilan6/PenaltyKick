@@ -43,6 +43,7 @@ namespace PenaltyKick
             m_Capsule = GetComponent<CapsuleCollider>();
             m_CapsuleHeight = m_Capsule.height;
             m_CapsuleCenter = m_Capsule.center;
+            m_Animator.applyRootMotion = false;
 
             m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
             m_OrigGroundCheckDistance = m_GroundCheckDistance;
@@ -124,7 +125,7 @@ namespace PenaltyKick
             m_Animator.SetFloat("Forward", m_ForwardAmount, 0.1f, Time.deltaTime);
             m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
             m_Animator.SetBool("Crouch", m_Crouching);
-            m_Animator.SetBool("OnGround", m_IsGrounded);
+            m_Animator.SetBool("OnGround", true);
 
             if (!m_IsGrounded)
             {
@@ -167,15 +168,15 @@ namespace PenaltyKick
 
         void HandleGroundedMovement(bool crouch, bool jump, bool kick, bool blockKick, bool catchBall)
         {
-            // check whether conditions are right to allow a jump:
-            if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
-            {
-                // jump!
-                m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
-                m_IsGrounded = false;
-                m_Animator.applyRootMotion = false;
-                m_GroundCheckDistance = 0.1f;
-            }
+            //// check whether conditions are right to allow a jump:
+            //if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
+            //{
+            //    // jump!
+            //    m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
+            //    m_IsGrounded = false;
+            //    //m_Animator.applyRootMotion = false;
+            //    //m_GroundCheckDistance = 0.1f;
+            //}
 
             if (kick && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
             {
@@ -235,21 +236,21 @@ namespace PenaltyKick
             RaycastHit hitInfo;
 #if UNITY_EDITOR
             // helper to visualise the ground check ray in the scene view
-            Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
+            Debug.DrawLine(transform.position + (Vector3.up * 0.2f), transform.position + (Vector3.down * m_GroundCheckDistance));
 #endif
             // 0.1f is a small offset to start the ray from inside the character
             // it is also good to note that the transform position in the sample assets is at the base of the character
-            if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance, TerrainLayerMask, QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(transform.position + (Vector3.up * 0.2f), Vector3.down, out hitInfo, m_GroundCheckDistance, TerrainLayerMask, QueryTriggerInteraction.Ignore))
             {
                 m_GroundNormal = hitInfo.normal;
                 m_IsGrounded = true;
-                m_Animator.applyRootMotion = true;
+                //m_Animator.applyRootMotion = true;
             }
             else
             {
                 m_IsGrounded = false;
                 m_GroundNormal = Vector3.up;
-                m_Animator.applyRootMotion = false;
+                //m_Animator.applyRootMotion = false;
             }
         }
 
