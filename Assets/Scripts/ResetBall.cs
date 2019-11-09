@@ -1,28 +1,30 @@
-﻿using Gamelogic.Extensions;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace PenaltyKick
 {
-	public class SoccerBall : Singleton<SoccerBall>
-	{
-		[System.NonSerialized]
-		public bool IsKicked;
+    public class ResetBall : MonoBehaviour
+    {
+        public bool IsKicked;
 
-		[System.NonSerialized]
-		public bool CanScoreGoal;
-
-		Vector3 StartPosition;
+        Vector3 StartPosition;
         float timeSinceKick;
 
-		private void Awake()
-		{
-			StartPosition = transform.position;
-		}
+        private void Awake()
+        {
+            StartPosition = transform.position;
+        }
 
-		void Update()
-		{
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
             if (IsKicked)
             {
                 timeSinceKick += Time.deltaTime;
@@ -34,16 +36,7 @@ namespace PenaltyKick
                     GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                     transform.position = StartPosition;
                 }
-            }			
-		}
-
-		public void OnNextKicker()
-		{
-			GetComponent<Rigidbody>().velocity = Vector3.zero;
-			GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-			transform.position = StartPosition;
-
-			CanScoreGoal = true;
-		}
-	}
+            }
+        }
+    }
 }

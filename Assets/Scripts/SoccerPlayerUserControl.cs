@@ -16,7 +16,7 @@ namespace PenaltyKick
         Vector3 m_Move;
         bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
         bool m_Crouch;
-        bool m_Kick;
+        public bool m_Kick;
         float kickPower;
 
         // Start is called before the first frame update
