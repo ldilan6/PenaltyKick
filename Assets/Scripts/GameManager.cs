@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -43,12 +44,14 @@ namespace PenaltyKick
 
         GameObject currentPlayer;
 
+        
+
         private void Awake()
         {
             audioSource = GetComponent<AudioSource>();
 #if UNITY_IOS || UNITY_ANDROID
-            if (MobileInputs)
-                MobileInputs.SetActive(true);
+            //if (MobileInputs)
+                //MobileInputs.SetActive(true);
 #endif
         }
 
