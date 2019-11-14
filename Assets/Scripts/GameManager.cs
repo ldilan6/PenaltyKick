@@ -10,6 +10,8 @@ namespace PenaltyKick
 {
     public class GameManager : Singleton<GameManager>
     {
+        public AudioClip ScoreSound;
+        public AudioClip EndGameSound;
         public Transform PlayerStartPosition;
         public Transform AIStartPosition;
         public bool UseJoystick;
@@ -36,9 +38,19 @@ namespace PenaltyKick
         bool isSuddenDeath;
 
         float timeSinceShot;
+        AudioSource audioSource;
 
 
         GameObject currentPlayer;
+
+        private void Awake()
+        {
+            audioSource = GetComponent<AudioSource>();
+#if UNITY_IOS || UNITY_ANDROID
+            if (MobileInputs)
+                MobileInputs.SetActive(true);
+#endif
+        }
 
         // Start is called before the first frame update
         void Start()
@@ -187,8 +199,14 @@ namespace PenaltyKick
             SoccerBall.Instance.CanScoreGoal = false;
 
             IsGoal = true;
-            //if (ScoreSound)
-               // audioSource.PlayOneShot(ScoreSound);
+            if (ScoreSound)
+               audioSource.PlayOneShot(ScoreSound);
+        }
+
+        public void OnKickButton()
+        {
+            var player = GameObject.FindObjectOfType<SoccerPlayerUserControl>();
+            player.m_Kick = true;
         }
 
         public void OnShotTaken()
@@ -212,8 +230,8 @@ namespace PenaltyKick
             EndGameText.GetComponent<Text>().text = "Team " + winner.TeamId + " Won!";
             EndGameText.SetActive(true);
 
-            //if (EndGameSound)
-               // audioSource.PlayOneShot(EndGameSound);
+            if (EndGameSound)
+                audioSource.PlayOneShot(EndGameSound);
 
             Invoke("RestartGame", EndGamePauseSecs);
         }
