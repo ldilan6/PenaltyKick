@@ -23,7 +23,7 @@ The free version is fine. Download with the Unity Hub included.
 
 Once you have Unity downloaded, you must download the game engine. The specific version you will need is found here, https://unity3d.com/unity/alpha/2019.3.0a2
 
-Click on the download with Hub option. 
+Click on the install with Hub option. 
 
 Next step is to download the latest version of Xcode. https://apps.apple.com/us/app/xcode/id497799835?mt=12
 
