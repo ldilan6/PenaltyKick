@@ -25,6 +25,8 @@ Once you have Unity downloaded, you must download the game engine. The specific 
 
 Click on the install with Hub option. 
 
+Now you must add the iOS module. Do this by opening the Unity Hub then click on the Installs tab, there click on your games engines three dots. Click on add modules, then check iOS build support, click done and install.
+
 Next step is to download the latest version of Xcode. https://apps.apple.com/us/app/xcode/id497799835?mt=12
 
 Once those two software packages are downloaded, you will then download this project ZIP to your computer and save it to whatever folder you wish. 
@@ -73,7 +75,9 @@ Click choose to instruct Xcode to download any required certificates and generat
 
 On your device, go to Settings> Display and Brightness> Auto-lock. Disable locking by selecting never.
 
-In the top left of the Xcode interface, click Run (the "play" button).
+In the top left of the Xcode interface, click Run (the "play" button). You should see the app when Xcode finishes building. 
+
+If needed do the following. 
 
 Enable Developer mode by choosing Enable, and enter your password when prompted. 
 
