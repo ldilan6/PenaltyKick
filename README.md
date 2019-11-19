@@ -3,7 +3,7 @@
 Android APK found at this google drive link. 
 ---------
 
-https://drive.google.com/open?id=1cHabiJw3bxFxoxRqX7pZi6rQIAWD5Ck7
+https://drive.google.com/open?id=1pdf_BzEtPVd9m2dX0aB5tsKNAECi3fSU
 
 Download file to your computer and then add it to your phone (folder) via a usb cable.
 
@@ -67,11 +67,15 @@ Double click the .xcodeproj file to open the project with Xcode.
 
 In the top left, select Unity-iPhone to view the project settings. It will open with the General tab selected.
 
-Under the topmost section called Identity, you may see a warning and a button that says Fix Issue. Click the Fix Issue button. 
+Under the topmost section called Identity, you may see a warning and a button that says Fix Issue. Click the Fix Issue button if needed. Otherwise continue. 
 
 A popup will appear, showing details of any teams that have been added to Xcode. Make sure that the correct team is shown in the dropdown.
 
 Click choose to instruct Xcode to download any required certificates and generate a provisioning profile. The warning will then disappear. 
+
+Click on Unity-iphone in the left corner and under signings and capabilities enable automatic signings. Then select your Apple ID team from the dropdown for teams.
+
+Next select build settings under the same menu of Unity-iphone and under project document select your current version of xcode under project format. 
 
 On your device, go to Settings> Display and Brightness> Auto-lock. Disable locking by selecting never.
 
