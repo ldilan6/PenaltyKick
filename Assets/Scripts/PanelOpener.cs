@@ -5,6 +5,7 @@ using UnityEngine;
 public class PanelOpener : MonoBehaviour
 {
     public GameObject Panel;
+    
 
     public void OpenPanel()
     {
@@ -15,4 +16,5 @@ public class PanelOpener : MonoBehaviour
             Panel.SetActive(!isActive);
         }
     }
+
 }
