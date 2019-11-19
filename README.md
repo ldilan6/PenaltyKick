@@ -3,13 +3,13 @@
 Android APK found at this google drive link. 
 ---------
 
-https://drive.google.com/open?id=1pdf_BzEtPVd9m2dX0aB5tsKNAECi3fSU
+https://drive.google.com/open?id=1ekdV9DU1uMV9NRBvoP8kXuyfVt4thzvk
 
 Download file to your computer and then add it to your phone (folder) via a usb cable.
 
 Go to Phone settings, Security, and have the unknown sources button checked. 
 
-Should be able to open the apk and play the game now. 
+Should be able to open the apk and play the game now. The game is played in landscape view. 
 
 iOS users follow these steps to download the game.
 --------------------
@@ -79,7 +79,7 @@ Next select build settings under the same menu of Unity-iphone and under project
 
 On your device, go to Settings> Display and Brightness> Auto-lock. Disable locking by selecting never.
 
-In the top left of the Xcode interface, click Run (the "play" button). You should see the app when Xcode finishes building. 
+In the top left of the Xcode interface, click Run (the "play" button). You should see the app when Xcode finishes building. The game is played in landscape view. 
 
 If needed do the following. 
 
