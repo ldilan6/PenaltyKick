@@ -3,7 +3,7 @@
 Android APK found at this google drive link. 
 ---------
 
-https://drive.google.com/open?id=1ekdV9DU1uMV9NRBvoP8kXuyfVt4thzvk
+https://drive.google.com/open?id=1tJRx2vgGA_D39x_Y3O3F7uBrSs4IMVNP
 
 Download file to your computer and then add it to your phone (folder) via a usb cable.
 
