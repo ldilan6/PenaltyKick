@@ -13,7 +13,7 @@ Should be able to open the apk and play the game now.
 
 iOS users follow these steps to download the game.
 --------------------
-Must have a Mac computer to do so. 
+Must have a Mac computer to do so. Connect your device via a usb cable.
 
 Start off by downloading Unity. 
 
