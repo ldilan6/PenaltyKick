@@ -3,7 +3,7 @@
 Android APK found at this google drive link. 
 ---------
 
-https://drive.google.com/open?id=1IbVWQbMnrC-NgNL9HW2akjKWmwcGzk5m
+https://drive.google.com/open?id=1nHAnHZvDXfyYZYhlHRFmTsYMCMjg4PCA
 
 Download file to your computer and then add it to your phone (folder) via a usb cable.
 
@@ -29,7 +29,7 @@ Now you must add the iOS module. Do this by opening the Unity Hub then click on 
 
 Next step is to download the latest version of Xcode. https://apps.apple.com/us/app/xcode/id497799835?mt=12
 
-Once those two software packages are downloaded, you will then download this project ZIP to your computer and save it to whatever folder you wish. If the joystick happens to be out of position for you, please download this folder from my google drive. Use this folder instead of downloading the zip from Github. Continue the instructions using this folder as the "zip" folder. https://drive.google.com/open?id=1_VPgEUR3815rmt91uBz68ucUyraeTgoD 
+Once those two software packages are downloaded, you will then download this project ZIP to your computer and save it to whatever folder you wish. If the joystick happens to be out of position for you, please download this folder from my google drive. Use this folder instead of downloading the zip from Github. Continue the instructions using this folder as the "zip" folder. 
 
 Now to add an Apple ID to Xcode. Open Xcode, from the menu bar at the top of the screen choose Xcode>Preferences. From the preferences window. 
 
